@@ -1,0 +1,43 @@
+<nav class="navbar">
+  <ul class="navbar-nav">
+    <li>
+        <img src="assets/images/can.jpg" class="can">
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="DisplayContent('about')">
+        <img src="assets/icons/about.svg" class="logo">
+        <span class="link-text">About</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link">
+        <img src="assets/icons/demos.svg" class="logo">
+        <span class="link-text">Demos</span>
+      </a>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link" (click)="DisplayContent('tictactoe')">
+            <span class="link-text">Tic Tac Toe</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="DisplayContent('facebook')">
+            <span class="link-text">Basic Facebook</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a href="mailto:contact@cansoylu.fr" class="nav-link">
+        <img src="assets/icons/contact.svg" class="logo">
+        <span class="link-text">Contact</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a  class="nav-link">
+        <img src="assets/icons/surprise.svg" class="logo">
+        <span class="link-text">Surprise</span>
+      </a>
+    </li>
+  </ul>
+</nav>

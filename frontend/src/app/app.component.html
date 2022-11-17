@@ -1,0 +1,9 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+  <app-sidebar (sendDisplayName)="DisplayName($event)"></app-sidebar>
+  <main>
+    <app-about *ngIf="contents.about"></app-about>
+    <app-tictactoe *ngIf="contents.tictactoe"></app-tictactoe>
+    <app-facebook *ngIf="contents.facebook"> </app-facebook>
+  </main>
+</body>

@@ -1,0 +1,62 @@
+<div class="about">
+  <h1>About me</h1>
+  <div class="block-content">
+  <p>Hello my name is Can, from south of France. I am technical, curious and passionate about new technologies. I've had a chance to experience with different aspects of infrastructure, development and devops in my recent jobs.I am always looking into new adventures, even if it leads to the unknown.</p>
+  </div>
+</div>
+<div class="progress">
+  <h1>My path</h1>
+  <div class="block-content">
+  <p *ngIf="progress['explain']" >Click on the names to show.</p>
+  <div class="progress-bar">
+    <a class="progress-item" (click)="displayExperience('greta')">
+      GRETA
+    </a>
+    <a class="progress-item" (click)="displayExperience('2srei')">
+      2SREI
+    </a>
+    <a class="progress-item" (click)="displayExperience('openclassrooms')">
+      OPENCLASSROOMS
+    </a>
+    <a class="progress-item" (click)="displayExperience('geco-it')">
+      Geco-IT
+    </a>
+  </div>
+
+
+<div class="experience">
+  <div class="experience-item" *ngIf="progress['greta']">
+    <span class="exp-title">IT Support Technician Education (Bac)</span>
+    <p> This easy but comprehensive 1 year education made me understand the IT environment and make my decisions. We learned mainly how to maintain an IT system and stay in touch with clients.</p>
+    </div>
+  <div class="experience-item" *ngIf="progress['2srei']">
+    <span class="exp-title">IT Support Technician Internship (Stage)</span>
+    <p> This is my first experience in the industry. It was as close as one month. I had a chance to drive a little project about their cloud providing solutions and how to secure them.</p>
+  </div>
+  <div class="experience-item" *ngIf="progress['openclassrooms']">
+    <span class="exp-title">IT Technician Education (Bac +2)</span>
+    <p> As someone who left high school, this kind of education was what i needed back then. I completed 8 different projects, from customer support to automating active directory actions, in one year.</p>
+  </div>
+  <div class="experience-item" *ngIf="progress['geco-it']">
+    <span class="exp-title">IT Technician Internship (Alternance)</span>
+    <p> My development skills that I aquired before were really helpfull in this job. I've learned a lot. I coded a lot. This also helped me understand what I like to do. I love coding and I also love Docker and Ansible and all the automation that i've built, i've helped build.</p>
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="skills">
+  <h1>Things I used</h1>
+<div class="block-content">
+  <div class="stack-grid">
+    <div class="stack-item" *ngFor="let stackitem of stacklist">
+      <div class="stack-inner">
+        <h2 class="stack-name">{{stackitem.name}}</h2>
+        <img [src]="stackitem.icon" alt="{{stackitem.name}}" class="stack-image" />
+        <p class="stack-description">{{stackitem.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

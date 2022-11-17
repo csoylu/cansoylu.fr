@@ -1,0 +1,158 @@
+.mainwrapper{
+  position: relative;
+}
+header{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 1px 10px grey;
+}
+
+header ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: cornflowerblue;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-color: black;
+  border-style: double;
+  border-width: 1px;
+  align-items: center;
+  height: 60px;
+}
+
+header ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.mainwrapper{
+  background-color: #FAFAFA;
+  border-radius: 15px;
+}
+
+
+.blocks{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.middle-block{
+  width: 40%;
+}
+
+
+.middle-block textarea{
+  border: 1px solid gray;
+  width: 96%;
+  height: 100px;
+  border-radius: 10px;
+  resize: none;
+  overflow: auto;
+  margin: 10px;
+  margin-bottom: 0px;
+}
+
+.textarea-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.textarea-footer button{
+  background-color: #6495ED;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.textarea-footer button:hover{
+  cursor: pointer;
+}
+
+.textarea-footer button:active{
+  background-color: #4169E1;
+}
+
+/* Post related CSS */
+.post{
+  background-color: antiquewhite;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 0 0 10px grey;
+}
+
+.post-content{
+  padding: 10px;
+}
+
+.post-content img{
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+
+.post-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-right: 30px;
+  margin-left: 30px;
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+.post-footer a{
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.post-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: cornflowerblue;
+  padding: 10px;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+}
+
+.post-header img, .post-header h3, .post-header p{
+  margin: 0;
+  font-size: 20px;
+  color: white;
+}
+
+
+.post-header img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+h1{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+}

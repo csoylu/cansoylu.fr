@@ -1,0 +1,49 @@
+<h1>
+  DEMO NOT FINISHED
+</h1>
+
+<section class="mainwrapper">
+  <header>
+    <ul>
+      <li>
+        <a href="#">Facebook</a>
+      </li>
+      <li>
+        <a href="#">Messages</a>
+      </li>
+    </ul>
+  </header>
+
+  <section class="blocks">
+    <section class="left-block">
+
+    </section>
+
+    <section class="middle-block">
+      <textarea></textarea>
+      <div class="textarea-footer">
+        <input class="file" type='file' id="imgSel" />
+        <button>Post</button>
+      </div>
+      <div class="post" *ngFor="let post of posts">
+        <div class="post-header">
+          <img src={{post.owner.avatar}} alt="avatar" class="avatar">
+          <h3>{{post.owner.name}}</h3>
+          <p>{{post.created_time}}</p>
+        </div>
+        <div class="post-content">
+          <p>{{post.message}}</p>
+        </div>
+        <div class="post-footer">
+          <a href="#"> Like {{post.likes}}</a>
+          <a href="#">Comment</a>
+          <a href="#">Share</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="right-block">
+
+    </section>
+  </section>
+</section>

@@ -1,0 +1,108 @@
+.progress-bar{
+  width: 100%;
+  height: 15px;
+  background: linear-gradient(90deg, #202020 0%, #EF8354 100%);
+  z-index: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  background-size: 400% 400%;
+  animation: gradient 6s ease infinite;
+}
+.progress-item{
+  padding: 4px;
+  border-radius: 10rem;
+  background-color: #313131;
+  color: var(--text-primary);
+  align-items: center;
+  width: 150px;
+  text-align: center;
+}
+
+.progress-item:hover{
+  background-color: #bf236c;
+  cursor: pointer;
+}
+
+
+
+.progress, .about, .skills{
+  background-color: rgb(226, 226, 226);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+h1{
+  text-align: center;
+  height: 2.2rem;
+  width: 100%;
+  background-color: #23232E;
+  color: var(--text-primary);
+  font-size: 2rem;
+  font-weight: 600;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+
+.experience{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.experience-item{
+  text-align: center;
+  padding: 3px;
+  width: 90%;
+}
+
+.exp-title{
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.stack-grid{
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.stack-name{
+  text-align: center;
+  color: var(--text-primary);
+  font-weight: 500;
+  z-index: 1;
+}
+
+.stack-image{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  height: 180px;
+  opacity: 0.1;
+}
+
+.stack-inner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #23232E;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px;
+  min-height: 195px;
+}
+.stack-description{
+  color: var(--text-primary);
+  z-index: 1;
+}
+
+.block-content{
+  padding: 5px;
+}

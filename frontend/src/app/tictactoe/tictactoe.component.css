@@ -1,0 +1,76 @@
+.window{
+  width: 90%;
+  height: 100%;
+  background-color: ghostwhite;
+  margin-right: auto;
+  margin-left: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  max-width: 85vh;
+  padding-bottom: 20px;
+}
+
+.window h1{
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text-primary);
+  background-color: #23232E;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.board{
+  margin-right: auto;
+  margin-left: auto;
+  width: auto;
+  max-width: 90%;
+  height: auto;
+  max-height: 90%;
+  background-color: #23232E;
+  aspect-ratio: 1/1;
+  border-radius: 5px;
+}
+.rows{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.square{
+  margin: 2%;
+  width: 33%;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 5px;
+  background-color: #bf236c;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.XoX{
+  font-size: 10rem;
+  color: black;
+  padding-bottom: 1rem;
+}
+
+.status p{
+  text-align: center;
+  font-size: 1.5rem;
+  height: 1.7rem;
+  margin-top: 15px;
+}
+
+button{
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  width: 50%;
+  height: 2rem;
+  background-color: #bf236c;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}

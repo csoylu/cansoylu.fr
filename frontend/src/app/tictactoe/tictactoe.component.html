@@ -1,0 +1,20 @@
+<div class="window">
+  <h1>Tic Tac Toe!</h1>
+  <div class="board">
+    <div *ngFor="let rows of boardrows; let rowindex=index" class="rows">
+        <div class="square" (click)="makeMove(0, rowindex)">
+          <p class="XoX">{{rows[0]}}</p>
+        </div>
+        <div class="square" (click)="makeMove(1, rowindex)">
+          <p class="XoX">{{rows[1]}}</p>
+        </div>
+        <div class="square" (click)="makeMove(2, rowindex)">
+          <p class="XoX">{{rows[2]}}</p>
+        </div>
+    </div>
+  </div>
+  <div class="status">
+    <p>{{status}}</p>
+  </div>
+  <button (click)="ResetGame()" *ngIf="restartGameButton">Restart Game</button>
+</div>
