@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require('mongoose');
 require('dotenv/config');
 
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '20mb'}));
 
 //ROUTES
 app.get('/', (req, res) => {
@@ -15,6 +15,9 @@ app.get('/', (req, res) => {
 //IMPORT ROUTES
 const userRoute = require('./routes/user');
 app.use('/user', userRoute);
+
+const postRoute = require('./routes/post');
+app.use('/post', postRoute);
 
 //CONNECT TO DB
 mongoose.connect(process.env.DB_CONNECTION, () => {
