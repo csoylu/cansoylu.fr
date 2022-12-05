@@ -9,6 +9,9 @@ const saltRounds = 10;
 
 
 router.get('/login', (req, res) => {
+    console.log("User login: ");
+    console.log(req.body);
+
     User.find({ _id: req.body.id }, (err, user) => {
         if (err) {
             res.status(500).send(err);
@@ -39,6 +42,9 @@ router.get('/checktoken', (req, res) => {
 })
 
 router.post('/create', (req, res) => {
+    console.log("Creating user: ");
+    console.log(req.body);
+
     User.find({_id: req.body.id}, (err, user) => {
         if (user.length > 0) {
             console.log(`Cannot create user ${req.body.id} already exists`);

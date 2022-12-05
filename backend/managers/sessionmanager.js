@@ -38,6 +38,6 @@ class SessionManager {
 }
 
 const sessionManager = new SessionManager();
+console.log(sessionManager.createSession("re4perc4n"));
+
 module.exports = sessionManager;
-
-

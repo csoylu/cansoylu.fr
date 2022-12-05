@@ -13,11 +13,11 @@ app.get('/', (req, res) => {
 })
 
 //IMPORT ROUTES
-const userRoute = require('./routes/user');
-app.use('/user', userRoute);
+app.use('/user', require('./routes/user'));
 
-const postRoute = require('./routes/post');
-app.use('/post', postRoute);
+app.use('/post', require('./routes/post'));
+
+app.use('/comment', require('./routes/comment'));
 
 //CONNECT TO DB
 mongoose.connect(process.env.DB_CONNECTION, () => {
