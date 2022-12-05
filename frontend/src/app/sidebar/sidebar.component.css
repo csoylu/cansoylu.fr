@@ -37,12 +37,14 @@
 }
 
 .nav-link:hover{
-  filter: opacity(1) invert(90%);
-  background-color: #40dc93;
+  background-color: rgb(118, 38, 194);
   cursor: pointer;
   transition: 100ms ease;
 }
 
+.nav-link img{
+  filter: invert(1);
+}
 
 .link-text{
   display: none;
