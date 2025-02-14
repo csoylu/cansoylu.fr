@@ -1,0 +1,363 @@
+:root {
+  --primary-color: #4a90e2;
+  --text-color: #333;
+  --background-color: #f5f8fa;
+  --card-background: #ffffff;
+  --hover-color: #357abd;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes border-shine {
+  0% {
+    background-position: 200% 0%;
+  }
+  100% {
+    background-position: -200% 0%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--card-background);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-image {
+  width: 180px;
+  height: 180px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  padding: 3px;
+  background: linear-gradient(
+    45deg,
+    var(--primary-color) 0%,
+    var(--primary-color) 35%,
+    #ffffff 50%,
+    var(--primary-color) 65%,
+    var(--primary-color) 100%
+  );
+  background-size: 200% 100%;
+  transition: transform 0.3s ease;
+}
+
+.profile-image::after {
+  content: "Hit me up, I love curious people!";
+  position: absolute;
+  inset: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(74, 144, 226, 0.95);
+  color: white;
+  font-weight: 500;
+  border-radius: 10px;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+  z-index: 2;
+  pointer-events: none;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.profile-image:hover {
+  animation: border-shine 6s ease-in-out infinite;
+  box-shadow: 0 4px 20px rgba(74, 144, 226, 0.4);
+}
+
+.profile-image:hover::after {
+  animation: showMessage 10s forwards;
+}
+
+@keyframes showMessage {
+  0%,
+  95% {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+  }
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.hero-content {
+  flex-grow: 1;
+  animation: slideIn 0.8s ease-out;
+}
+
+h1,
+h2,
+.social-links {
+  animation: slideIn 0.8s ease-out;
+}
+
+h2 {
+  animation-delay: 0.1s;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  animation-delay: 0.2s;
+}
+
+.social-links a {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--hover-color);
+}
+.content {
+  padding: 2rem;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.about p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+  max-width: 800px;
+  line-height: 1.8;
+  transition: transform 0.3s ease;
+}
+
+.about a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.about a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.about a:hover {
+  color: var(--hover-color);
+}
+
+.about a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+h3:hover {
+  transform: translateX(5px);
+}
+
+h4 {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: all 0.3s ease;
+}
+
+h4:hover {
+  color: var(--primary-color);
+  transform: translateX(5px);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.skill-tags span {
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: default;
+}
+
+.skill-tags span.separator {
+  color: var(--text-color);
+  opacity: 0.3;
+  cursor: default;
+}
+
+.skill-tags span:not(.separator) {
+  transition: all 0.3s ease;
+}
+
+.skill-tags span:not(.separator):hover {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.skill-tags span:not(.separator):hover::after {
+  width: 100%;
+}
+
+.skill-tags span:not(.separator)::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--primary-color);
+  transition: width 0.2s ease;
+}
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid #eee;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+  will-change: opacity, transform;
+}
+
+footer p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+footer a {
+  color: #6441a5;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+footer a:hover {
+  background-color: #6441a5;
+  color: white;
+  transform: translateY(-2px);
+}
+
+footer i {
+  margin-right: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .content {
+    padding: 1.5rem;
+  }
+}

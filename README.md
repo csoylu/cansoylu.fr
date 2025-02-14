@@ -1,2 +1,2 @@
-# cansoylu.fr
+# cansoylu.dev
 My personal website
